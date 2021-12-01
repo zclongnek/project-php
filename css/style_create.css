@@ -1,0 +1,31 @@
+.box-content{
+    margin: 0 auto;
+    width: 800px;
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 20px;
+}
+#create_user form{
+    width: 200px;
+    margin: 20px auto;
+}
+#create_user form input{
+    margin: 5px 0;
+}
+#user_infor{
+  
+    width: 1000px;
+    margin: 0 auto ;
+    padding: 0px ;
+   
+}
+table{
+    margin: 10 auto 0 auto;
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+}

@@ -25,7 +25,9 @@
       <th scope="col">Giới Tính</th>
       <th scope="col">SDT</th>
       <th scope="col">Quê Quán</th>
+      <th scope="col">Chức Vụ</th>
       <th scope="col">Chức Năng</th>
+
 
     </tr>
     
@@ -40,6 +42,7 @@
                  <td><?= $row['gioitinh'] ?></td>
                 <td><?= $row['sdt'] ?></td>
                 <td><?= $row['quequan'] ?></td>
+                <td><?= $row['chucvu'] ?></td>
                <td><button type="button" class="btn btn-primary"><a href="insert.php" style="color: white;">Thêm</a></button>
                <button type="button" class="btn btn-danger"><a href="insert.php" style="color: white;">Sửa</a></button>
                <button type="button" class="btn btn-warning"><a href="insert.php" style="color: black;">Xóa</a></button>

@@ -39,28 +39,21 @@
                 <td><?= $row['id'] ?></td>
                 <td><?= $row['hoten'] ?></td>
                 <td><?= $row['ngaysinh'] ?></td>
-                 <td><?= $row['gioitinh'] ?></td>
-                <td><?= $row['sdt'] ?></td>
+                 <td><?= $row['gtinh'] ?></td>
+                <td><?= $row['SDT'] ?></td>
                 <td><?= $row['quequan'] ?></td>
                 <td><?= $row['chucvu'] ?></td>
                <td><button type="button" class="btn btn-primary"><a href="insert.php" style="color: white;">Thêm</a></button>
                <button type="button" class="btn btn-danger"><a href="insert.php" style="color: white;">Sửa</a></button>
                <button type="button" class="btn btn-warning"><a href="insert.php" style="color: black;">Xóa</a></button>
-              </td>
-               <td></td>
-               <td></td>
-               
-               
-               
-
-             
             </tr>
+            
 <?php } ?>
 </table>
 
 
     </tr>
-  </tbody>
+  
 </table>
 </body>
 </html>

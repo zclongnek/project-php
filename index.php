@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
      <link rel="stylesheet" href="css/style_create.css">
-    <title>Document</title>
+    <title>Home</title>
 </head>
 <body>
 <?php
@@ -32,7 +32,7 @@
     </tr>
     
     <?php 
-        while ($row = mysqli_fetch_array($result)) {
+        while ($row = mysqli_fetch_assoc($result)): 
     ?>   
             <tr>
 
@@ -44,15 +44,17 @@
                 <td><?= $row['quequan'] ?></td>
                 <td><?= $row['chucvu'] ?></td>
                <td><button type="button" class="btn btn-primary"><a href="insert.php" style="color: white;">Thêm</a></button>
-               <button type="button" class="btn btn-danger"><a href="insert.php" style="color: white;">Sửa</a></button>
-               <button type="button" class="btn btn-warning"><a href="insert.php" style="color: black;">Xóa</a></button>
-            </tr>
+               <button type="button" class="btn btn-danger"><a href="edit.php?id=<?php echo $row['id']  ?>">Sửa</a></button>
+               <button type="button" class="btn btn-warning"><a href="conn.php?delete=<?php echo $row['id']; ?>">Xóa</a></button>
             
-<?php } ?>
+              </tr>
+
+            
+<?php  endwhile; ?>
+
 </table>
 
-
-    </tr>
+ 
   
 </table>
 </body>

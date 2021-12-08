@@ -24,8 +24,6 @@ session_start();
   <thead class="thead-dark">
   <div id="user_infor">
     <h1>Danh Sách Nhân Sự </h1> 
-   <!-- Search form -->
-
     <tr>
       <th scope="col">id</th>
       <th scope="col">Họ Tên</th>

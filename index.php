@@ -3,8 +3,8 @@ include 'config.php' ;
 
 if(isset($_POST["submit"])){
     $username = $_POST["username"];
-    $password =$_POST["Password_user"];
-    $sql = mysqli_query($conn," SELECT count(*) as total from user where username = '$username' and Password_user = '$password'") or die(mysqli_error($conn));
+    $password =$_POST["Passw"];
+    $sql = mysqli_query($conn," SELECT count(*) as total from user where username = '$username' and Passw = '$password'") or die(mysqli_error($conn));
     $row = mysqli_fetch_array($sql);
     if($row['total'] > 0 ){
        header('location:xuly.php');
@@ -65,7 +65,7 @@ if(isset($_POST["submit"])){
                                                 placeholder="Enter Username">
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" name="Password_user" class="form-control form-control-user"
+                                            <input type="password" name="Passw" class="form-control form-control-user"
                                                 id="exampleInputPassword" placeholder="Password">
                                         </div>
                                         <div class="form-group">

@@ -7,11 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style_inset.css">
-<<<<<<< HEAD
-    <title>Thêm nhân sự</title>
-=======
+
     <title>thêm nhân sự</title>
->>>>>>> 842e67ada06243c7250205a0f13aeb2c90404424
+
 </head>
 
 <body>
@@ -70,9 +68,13 @@
     <label for="chucvu">Chức vụ</label>
     <input name="chucvu" class="form-control" >
   </div>
+  <div>
+  <label for="chucvu">Tiền Lương</label>
+    <input name="luong" class="form-control" >
+  </div>
   </div>
   <button type="submit" class="btn btn-primary" name="add">Lưu</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <button type="button" class="btn btn-success"><a href="index.php" style="color: white;">Quay Lại</a></button>
+  <button type="button" class="btn btn-success"><a href="xuly.php" style="color: white;">Quay Lại</a></button>
 </form>
 </div>
 </body>

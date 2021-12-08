@@ -75,6 +75,6 @@ $con->close();
             </div>
         </div>
         <button type="submit" class="btn btn-primary" name="update">Lưu</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <button type="button" class="btn btn-success"><a href="index.php" style="color: white;">Quay Lại</a></button>
+        <button type="button" class="btn btn-success"><a href="xuly.php" style="color: white;">Quay Lại</a></button>
     </form>
 </div>

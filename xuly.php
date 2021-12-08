@@ -32,6 +32,7 @@ session_start();
       <th scope="col">SDT</th>
       <th scope="col">Quê Quán</th>
       <th scope="col">Chức Vụ</th>
+      <th scope="col">Tiền Lương</th>
       <th scope="col">Chức Năng</th>
       <th> <button type="button" class="btn btn-success"><a href="qluser.php" style="color: white;">AccM</a></button>&nbsp;
       <button type="button" class="btn btn-success"><a href="logout.php" style="color: white;">Log out</a></button>
@@ -50,6 +51,8 @@ session_start();
                 <td><?= $row['SDT'] ?></td>
                 <td><?= $row['quequan'] ?></td>
                 <td><?= $row['chucvu'] ?></td>
+                <td><?= $row['luong'] ?></td>
+               
                <td><button type="button" class="btn btn-primary"><a href="insert.php" style="color: white;">Thêm</a></button>
                <button type="button" class="btn btn-danger"><a href="edit.php?id=<?php echo $row['id']  ?> "  style="color: white;">Sửa</a></button>
                <button type="button" class="btn btn-warning"><a href="conn.php?delete=<?php echo $row['id']; ?>"  style="color: white;">Xóa</a></button>

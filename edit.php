@@ -12,6 +12,7 @@ while ($res = mysqli_fetch_array($result)) {
     $SDT = $res['SDT'];
     $quequan = $res['quequan'];
     $chucvu = $res['chucvu'];
+    $luong = $res['luong'];
 }
 ?>
 <?php
@@ -25,8 +26,9 @@ if (isset($_POST['update'])) {
     $SDT = $_POST['SDT'];
     $quequan = $_POST['quequan'];
     $chucvu = $_POST['chucvu'];
+    $luong = $_POST['luong'];
 
-if ($con->query("UPDATE nhansu SET hoten='$hoten',ngaysinh='$ngaysinh',gtinh='$gtinh',SDT='$SDT',quequan='$quequan',chucvu='$chucvu' WHERE id=$id")) {
+if ($con->query("UPDATE nhansu SET hoten='$hoten',ngaysinh='$ngaysinh',gtinh='$gtinh',SDT='$SDT',quequan='$quequan',chucvu='$chucvu',luong='$luong' WHERE id=$id")) {
     echo "<script>alert('update  thành công!');</script>";
 } else {
     echo   "<script>alert('update thất bại');</script>";
@@ -36,8 +38,9 @@ $con->close();
 ?>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" href="css/style_inset.css">
-<div class="container">
-    <form method="POST" action="">
+<body > 
+<div class="container" >
+    <form method="POST" action="" >
         <div class="form-row">
             <div class="form-group col-md-2">
                 <label for="id">ID</label>
@@ -73,8 +76,13 @@ $con->close();
                 <label for="chucvu">Chức vụ</label>
                 <input name="chucvu" class="form-control" value="<?php echo $chucvu; ?>">
             </div>
+            <div class="form-group col-md-2">
+                <label for="luong">Tiền Lương</label>
+                <input name="luong" class="form-control" value="<?php echo $luong; ?>">
+            </div>
         </div>
         <button type="submit" class="btn btn-primary" name="update">Lưu</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <button type="button" class="btn btn-success"><a href="index.php" style="color: white;">Quay Lại</a></button>
+        <button type="button" class="btn btn-success"><a href="xuly.php" style="color: white;">Quay Lại</a></button>
     </form>
 </div>
+</body>

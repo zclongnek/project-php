@@ -11,7 +11,7 @@ mysqli_set_charset($con,'UTF8');
 
 if(isset($_GET['delete'])){
     $id = $_GET['delete'];
-    $con -> query("DELETE FROM nhansu WHERE ID=$id");
-    header("location: xuly.php");
+    $con -> query("DELETE FROM user WHERE id=$id");
+    header("location: qluser.php");
 }
 ?>

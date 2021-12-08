@@ -1,61 +1,110 @@
+<?php  
+include 'config.php' ;
+
+if(isset($_POST["submit"])){
+    $username = $_POST["username"];
+    $password =$_POST["Password_user"];
+    $sql = mysqli_query($conn," SELECT count(*) as total from user where username = '$username' and Password_user = '$password'") or die(mysqli_error($conn));
+    $row = mysqli_fetch_array($sql);
+    if($row['total'] > 0 ){
+       header('location:xuly.php');
+       
+    } else{
+        echo " <script>alert('username  and password are incorrect')</script>";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
+
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-     <link rel="stylesheet" href="css/style_create.css">
-    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Login</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
 </head>
-<body>
-<?php
-    include './conn.php';
-    $result = mysqli_query($con, "select *from nhansu");
-    mysqli_close($con);
-    ?>
-<table class="table">
-  <thead class="thead-dark">
-  <div id="user_infor">
-    <h1>Danh Sách Nhân Sự</h1>
-    <tr>
-      <th scope="col">id</th>
-      <th scope="col">Họ Tên</th>
-      <th scope="col">Ngày Sinh</th>
-      <th scope="col">Giới Tính</th>
-      <th scope="col">SDT</th>
-      <th scope="col">Quê Quán</th>
-      <th scope="col">Chức Vụ</th>
-      <th scope="col">Chức Năng</th>
 
 
-    </tr>
-    
-    <?php 
-        while ($row = mysqli_fetch_assoc($result)): 
-    ?>   
-            <tr>
+<body class="bg-gradient-primary">
+<form action="" method="post">
+    <div class="container">
 
-                <td><?= $row['id'] ?></td>
-                <td><?= $row['hoten'] ?></td>
-                <td><?= $row['ngaysinh'] ?></td>
-                 <td><?= $row['gtinh'] ?></td>
-                <td><?= $row['SDT'] ?></td>
-                <td><?= $row['quequan'] ?></td>
-                <td><?= $row['chucvu'] ?></td>
-               <td><button type="button" class="btn btn-primary"><a href="insert.php" style="color: white;">Thêm</a></button>
-               <button type="button" class="btn btn-danger"><a href="edit.php?id=<?php echo $row['id']  ?>">Sửa</a></button>
-               <button type="button" class="btn btn-warning"><a href="conn.php?delete=<?php echo $row['id']; ?>">Xóa</a></button>
-            
-              </tr>
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
 
-            
-<?php  endwhile; ?>
+            <div class="col-xl-10 col-lg-12 col-md-9">
 
-</table>
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row">
+                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                                    </div>
+                                    <form class="user">
+                                        <div class="form-group">
+                                            <input type="text" name="username" class="form-control form-control-user"
+                                                id="exampleInputEmail" aria-describedby="emailHelp"
+                                                placeholder="Enter Username">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" name="Password_user" class="form-control form-control-user"
+                                                id="exampleInputPassword" placeholder="Password">
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="custom-control custom-checkbox small">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck">
+                                                <label class="custom-control-label" for="customCheck">Remember
+                                                    Me</label>
+                                            </div>
+                                        </div>
+                                     <input    type="submit" name="submit" class="btn btn-primary btn-user btn-block"
+                                          
+                                          >   
+                                        <hr>
+                                        <a href="https://sites.google.com/d/1uj4lmqbsoSUZJ43TFwZLvuq7RZRlRASk/p/12rOKpzx8gP84V84sdu8SEcaYhrl4vCu_/edit" class="btn btn-google btn-user btn-block">
+                                            <i class="fab fa-google fa-fw"></i> Project information
+                                        </a>
+                                        <a href="createAccount.php" class="btn btn-facebook btn-user btn-block">
+                                            <i class="fab fa-facebook-f fa-fw"></i> Create Account
+                                        </a>
+                                    </form>
+                                    <hr>
+                                    <div class="text-center">
+                                        <a class="small" href="forgot-password.html">Forgot Password?</a>
+                                    </div>
+                                    <div class="text-center">
+                                        <a class="small" href="register.html">Create an Account!</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
- 
-  
-</table>
+            </div>
+
+        </div>
+
+    </div>
+</form>
 </body>
+
 </html>

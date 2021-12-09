@@ -14,11 +14,9 @@
 <?php require_once'conn.php'?>
     <?php
     if (isset($_POST['add1'])) {
-        $id = $_POST['id'];
         $username = $_POST['username'];
-        $password = $_POST['Password_user'];
-    
-        if ($con->query("INSERT INTO user (id,username,Password_user) VALUE (N'$id',N'$username',N'$password')")) {
+        $password = $_POST['passw'];
+        if ($con->query("INSERT INTO user (username,passw) VALUE (N'$username',N'$password')")) {
             echo "<script>alert('thêm thành công!');</script>";
         } else {
             echo   "<script>alert('thêm thât bại');</script>";
@@ -29,10 +27,6 @@
 <div class="container">
 <form method="POST" action="">
     <div class="form-row">
-    <div class="form-group col-md-2">
-    <label for="id">ID</label>
-    <input name="id" class="form-control" >
-  </div>
   <div class="form-group col-md-3">
     <label for="username">Username</label>
     <input name="username" class="form-control" >
@@ -40,13 +34,23 @@
     </div>
     <div class="form-row">
 <div class="form-group col-md-2">
-    <label for="Password_user">Password</label>
-    <input name="Password_user"  class="form-control">
+    <label for="passw">Password</label>
+    <input name="passw"  class="form-control">
   </div>
-  
+  <div class="form-group col-md-2">
+    <label for="email">Email</label>
+    <input name="email"  class="form-control" >
   </div>
+ 
+    </div>
+    <div class="form-row">
+    <div class="form-group col-md-2">
+    <label for="SDT">SDT</label>
+    <input name="SDT"  class="form-control">
+  </div>
+    </div>
   <button type="submit" class="btn btn-primary" name="add1">Lưu</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <button type="button" class="btn btn-success"><a href="index.php" style="color: white;">Quay Lại</a></button>
+  <button type="button" class="btn btn-success"><a href="qluser.php" style="color: white;">Quay Lại</a></button>
 </form>
 </div>
 </body>

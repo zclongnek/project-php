@@ -16,16 +16,15 @@
 <?php require_once'conn.php'?>
     <?php
     if (isset($_POST['add'])) {
-        $id = $_POST['id'];
         $hoten = $_POST['hoten'];
         $ngaysinh = $_POST['ngaysinh'];
         $gtinh =$_POST['gtinh'];
       $SDT =$_POST['SDT'];
     $quequan =$_POST['quequan'];
-
        $chucvu =$_POST['chucvu'];
        $luong =$_POST['luong'];
-        if ($con->query("INSERT INTO nhansu (id,hoten,ngaysinh,gtinh,SDT,quequan,chucvu,luong) VALUE (N'$id',N'$hoten',N'$ngaysinh',N'$gtinh',N'$SDT',N'$quequan',N'$chucvu',N'$luong')")) {
+       $cccd =$_POST['cccd'];
+        if ($con->query("INSERT INTO nhansu (hoten,ngaysinh,gtinh,SDT,quequan,chucvu,luong,cccd) VALUE (N'$hoten',N'$ngaysinh',N'$gtinh',N'$SDT',N'$quequan',N'$chucvu',N'$luong',N'$cccd')")) {
             echo "<script>alert('thêm thành công!');</script>";
         } else {
             echo   "<script>alert('thêm thât bại');</script>";
@@ -36,13 +35,15 @@
 <div class="container">
 <form method="POST" action="">
     <div class="form-row">
-    <div class="form-group col-md-2">
-    <label for="id">ID</label>
-    <input name="id" class="form-control" >
-  </div>
   <div class="form-group col-md-3">
     <label for="hoten">Họ Tên</label>
-    <input name="hoten" class="form-control" >
+    <input name="hoten" class="form-control" placeholder="">
+  </div>
+    </div>
+    <div class="form-row">
+<div class="form-group col-md-2">
+    <label for="cccd">CCCD</label>
+    <input name="cccd"  class="form-control" placeholder="Nhập số CCCD">
   </div>
     </div>
     <div class="form-row">

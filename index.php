@@ -79,20 +79,12 @@ if(isset($_POST["submit"])){
                                           
                                           >   
                                         <hr>
-                                        <a href="https://sites.google.com/d/1uj4lmqbsoSUZJ43TFwZLvuq7RZRlRASk/p/12rOKpzx8gP84V84sdu8SEcaYhrl4vCu_/edit" class="btn btn-google btn-user btn-block">
+                                        <a href="https://sites.google.com/view/nhom-12-hhl/trang-ch%E1%BB%A7" class="btn btn-google btn-user btn-block">
                                             <i class="fab fa-google fa-fw"></i> Project information
                                         </a>
-                                        <a href="createAccount.php" class="btn btn-facebook btn-user btn-block">
-                                            <i class="fab fa-facebook-f fa-fw"></i> Create Account
-                                        </a>
+                                      
                                     </form>
-                                    <hr>
-                                    <div class="text-center">
-                                        <a class="small" href="forgot-password.html">Forgot Password?</a>
-                                    </div>
-                                    <div class="text-center">
-                                        <a class="small" href="register.html">Create an Account!</a>
-                                    </div>
+                                  
                                 </div>
                             </div>
                         </div>

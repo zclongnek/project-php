@@ -2,6 +2,8 @@
 
 session_start();
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,11 +32,11 @@ session_start();
       <th scope="col">Ngày Sinh</th>
       <th scope="col">Giới Tính</th>
       <th scope="col">SDT</th>
+      <th scope="col">CCCD</th>
       <th scope="col">Quê Quán</th>
       <th scope="col">Chức Vụ</th>
       <th scope="col">Tiền lương</th>
       <th scope="col">Chức Năng</th>
-      <th ><input class="form-control" type="text" placeholder="Search" aria-label="Search" style="width: 80px;" > </th>
       <th> <button type="button" class="btn btn-success"><a href="qluser.php" style="color: white;">AccM</a></button>&nbsp;
       <button type="button" class="btn btn-success"><a href="logout.php" style="color: white;">Log out</a></button>
     </th>
@@ -50,6 +52,7 @@ session_start();
                 <td><?= $row['ngaysinh'] ?></td>
                  <td><?= $row['gtinh'] ?></td>
                 <td><?= $row['SDT'] ?></td>
+                <td><?= $row['cccd'] ?></td>
                 <td><?= $row['quequan'] ?></td>
                 <td><?= $row['chucvu'] ?></td>
                 <td><?= $row['luong'] ?></td>

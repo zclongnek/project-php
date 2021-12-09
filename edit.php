@@ -13,6 +13,7 @@ while ($res = mysqli_fetch_array($result)) {
     $quequan = $res['quequan'];
     $chucvu = $res['chucvu'];
     $luong = $res['luong'];
+    $cd = $res['cccâ'];
 }
 ?>
 <?php
@@ -27,8 +28,8 @@ if (isset($_POST['update'])) {
     $quequan = $_POST['quequan'];
     $chucvu = $_POST['chucvu'];
     $luong = $_POST['luong'];
-
-if ($con->query("UPDATE nhansu SET hoten='$hoten',ngaysinh='$ngaysinh',gtinh='$gtinh',SDT='$SDT',quequan='$quequan',chucvu='$chucvu',luong='$luong' WHERE id=$id")) {
+    $cd = $_POST['cccd'];
+if ($con->query("UPDATE nhansu SET hoten='$hoten',ngaysinh='$ngaysinh',gtinh='$gtinh',SDT='$SDT',quequan='$quequan',chucvu='$chucvu',luong='$luong' ,cccd = '$cd' WHERE id=$id")) {
     echo "<script>alert('update  thành công!');</script>";
 } else {
     echo   "<script>alert('update thất bại');</script>";
@@ -51,6 +52,7 @@ $con->close();
                 <input name="hoten" class="form-control" value="<?php echo $hoten; ?>">
             </div>
         </div>
+      
         <div class="form-row">
             <div class="form-group col-md-2">
                 <label for="ngaysinh">Ngày sinh</label>
@@ -79,6 +81,12 @@ $con->close();
             <div class="form-group col-md-2">
                 <label for="luong">Tiền Lương</label>
                 <input name="luong" class="form-control" value="<?php echo $luong; ?>">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-2">
+                <label for="cccd">CCCD</label>
+                <input name="cccd"  class="form-control" value="<?php echo $cd; ?>">
             </div>
         </div>
         <button type="submit" class="btn btn-primary" name="update">Lưu</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

@@ -46,9 +46,10 @@ session_start();
                 <td><?= $row['email'] ?></td>
                 <td><?= $row['SDT'] ?></td>
               
-               <td><button type="button" class="btn btn-primary"><a href="insert.php" style="color: white;" > Thêm</a></button>
-               <button type="button" class="btn btn-danger"><a href="edituser.php?id=<?php echo $row['id']  ?> "  style="color: white;">Sửa</a></button>
-               <button type="button" class="btn btn-warning"><a href="conuser.php?delete=<?php echo $row['id']; ?>"  style="color: white;">Xóa</a></button>
+        
+               <td><button type="button" class="btn btn-primary"><a href="createAccount.php" style="color: white;">Thêm</a></button>
+                 <button type="button" class="btn btn-danger"><a href="edituser.php?id=<?php echo $row['id']  ?> "  style="color: white;">Sửa</a></button>
+               <button type="button" class="btn btn-warning"><a href="conuser.php?delete=<?php echo $row['id']; ?>"  style="color: white;">Xóa</a></button></td>
             
               </tr>
 

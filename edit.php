@@ -13,7 +13,7 @@ while ($res = mysqli_fetch_array($result)) {
     $quequan = $res['quequan'];
     $chucvu = $res['chucvu'];
     $luong = $res['luong'];
-    $cd = $res['cccâ'];
+    $cd = $res['cccd'];
 }
 ?>
 <?php

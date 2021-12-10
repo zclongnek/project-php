@@ -1,4 +1,4 @@
 <?php 
 session_start();
-header("location:index.php");
+header("location:login.php");
 ?>

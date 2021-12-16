@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 
 <title>
-Reading
+Trang Chủ
 </title>
 <!-- Description and Keywords (start) -->
 <meta content='YOUR DESCRIPTION HERE' name='description'/>
@@ -1444,7 +1444,7 @@ Quản Lý nhân Sự
 <li><a href='https://github.com/zclongnek/project-php' itemprop='url'><span itemprop='name'>GitHub</span></a></li>
 </ul>
 </li>
-<li><a href='login.php' itemprop='url'><span itemprop='name'>Quản Lý Thông Tin</span></a></li> 
+<li><a href='login.php' itemprop='url'><span itemprop='name'>Quản Lý Thông Tin Nhân Sự</span></a></li> 
 </ul>
 </div>
 </div>
